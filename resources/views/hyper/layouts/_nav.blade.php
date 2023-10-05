@@ -8,7 +8,7 @@
         <ul class="list-unstyled topbar-right-menu float-right mb-0">
             <li class="notification-list">
                 <a class="nav-link right-bar-toggle" href="https://chatgpt.567bus.shop/"  target="_blank">
-                    <i class="noti-icon mdi mdi-cow"></i>
+                    <i class="noti-icon mdi mdi-atom"></i>
                     本站免费ChatGpt
                 </a>
             </li>
@@ -29,7 +29,7 @@
 
             <li class="notification-list">
                 <a class="nav-link right-bar-toggle" href="https://t.me/shantianliang_bot" target="_blank">
-                    <i class="noti-icon mdi mdi-telegram"></i>
+                    <i class="noti-icon mdi mdi-phone-classic"></i>
                     联系店主
                 </a>
             </li>
