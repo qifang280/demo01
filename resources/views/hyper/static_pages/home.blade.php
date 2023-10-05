@@ -17,6 +17,12 @@
         </div>
     </div>
 </div>
+<div class="card">
+    <div class="modal-header">
+        <h5 class="text-muted fw-normal mt-0" title="Number of Orders" id="myCenterModalLabel">{{ __('hyper.notice_announcement') }}</h5>
+    </div>
+    <div class="card-body">{!! dujiaoka_config_get('notice') !!}</div>
+</div>
 <div class="nav nav-list">
     <a href="#group-all" class="tab-link active" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
         <span class="tab-title">
