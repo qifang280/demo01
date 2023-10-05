@@ -12,11 +12,7 @@
                 </div>
             </div>
             <h4 class="page-title">
-                <button type="button" class="btn btn-outline-primary ml-1" id="notice-open">
-                    <i class="uil-comment-alt-notes me-1"></i>
-                    {{-- 公告 --}}
-                    {{ __('hyper.notice_announcement') }}
-                </button>
+              首页
             </h4>
         </div>
     </div>
@@ -111,7 +107,7 @@
         </div>
     </div>
 </div>
-@stop 
+@stop
 @section('js')
 <script>
     $('#notice-open').click(function() {
