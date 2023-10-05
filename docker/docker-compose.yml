@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  db:
+    image: mariadb:focal
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+      - MYSQL_DATABASE=dujiaoka
+      - MYSQL_USER=dujiaoka
+      - MYSQL_PASSWORD=YOUR_PASSWORD
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    volumes:
+      - ./redis:/data
+
+  web:
+    depends_on:
+      - db
+      - redis
+    image: wty8401/dujiaoka
+    container_name: dujiaoka
+    ports:
+      - 8099:80
+    restart: unless-stopped
+    environment:
+      # - INSTALL=false
+      - INSTALL=true
+      # - MODIFY=true
+    volumes:
+      - ./env.conf:/dujiaoka/.env
+      - ./uploads:/dujiaoka/public/uploads
+      - ./storage:/dujiaoka/storage
