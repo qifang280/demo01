@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6">
             	<div class="footer-links">
-                    Powered by：<a href="https://www.567bus.shop/">@567BUS</a>
+                    Powered by：<a href="https://www.567bus.shop/">©Copyright - 567BUS - 版权所有, 2020-2030</a>
                 </div>
             </div>
             <div class="col-md-6">
