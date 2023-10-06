@@ -9,7 +9,7 @@
             <li class="notification-list">
                 <a class="nav-link right-bar-toggle" href="https://chatgpt.567bus.shop/"  target="_blank">
                     <i class="noti-icon mdi mdi-atom"></i>
-                    本站免费ChatGpt
+                    免费ChatGpt
                 </a>
             </li>
 
@@ -29,7 +29,7 @@
 
             <li class="notification-list">
                 <a class="nav-link right-bar-toggle" href="https://t.me/shantianliang_bot" target="_blank">
-                    <i class="noti-icon mdi mdi-phone-classic"></i>
+                    <i class="noti-icon mdi mdi-email"></i>
                     联系店主
                 </a>
             </li>

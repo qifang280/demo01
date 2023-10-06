@@ -12,7 +12,7 @@
                 </div>
             </div>
             <h4 class="page-title">
-              首页
+              主页
             </h4>
         </div>
     </div>
