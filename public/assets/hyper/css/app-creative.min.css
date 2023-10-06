@@ -60,7 +60,7 @@ body {
     line-height: 1.5;
     color: #919ca7;
     text-align: left;
-    background-image: linear-gradient(180deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-image: linear-gradient(304deg, #FFDEE9 0%, #B5FFFC 50%, #ffffff 100%);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
