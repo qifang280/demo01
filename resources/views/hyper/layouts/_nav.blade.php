@@ -1,5 +1,5 @@
-<div class="header-navbar">
-    <div class="container header-flex">
+<div class="navbar-custom topnav-navbar">
+    <div class="container ">
         <!-- LOGO -->
         <a href="/" class="topnav-logo" style="float: none;">
             <img src="{{ picture_ulr(dujiaoka_config_get('img_logo')) }}" height="36">

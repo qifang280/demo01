@@ -8563,9 +8563,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .float-right {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    float: right!important
 }
 
 .float-none {
