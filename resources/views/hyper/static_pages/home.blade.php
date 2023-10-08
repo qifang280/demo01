@@ -58,6 +58,19 @@
                             {{-- 缺货 --}}
                             <span>{{ __('hyper.home_out_of_stock') }}</span>
                         </div>
+
+
+                        @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                        {{-- 自动发货 --}}
+                        <span class="badge bg-success position-absolute top-0 start-0">
+                         {{ __('hyper.buy_automatic_delivery') }}
+                        </span>
+                        @else
+                        {{-- 人工发货 --}}
+                        <span class="badge bg-warning position-absolute top-0 start-0">
+                            {{ __('hyper.buy_charge') }}
+                        </span>
+
                     @endif
                         <img class="home-img" src="/assets/hyper/images/loading.gif" data-src="{{ picture_ulr($goods['picture']) }}">
                         <div class="flex">
@@ -68,6 +81,11 @@
                                 {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                             </div>
                         </div>
+
+                        <button type="button" class="badge badge-outline-primary">
+                            <strong>{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</strong>
+                        </button>
+
                     </a>
                 @endforeach
             @endforeach
@@ -85,6 +103,18 @@
                             {{-- 缺货 --}}
                             <span>{{ __('hyper.home_out_of_stock') }}</span>
                         </div>
+
+                        @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                        {{-- 自动发货 --}}
+                        <span class="badge bg-success position-absolute top-0 start-0">
+                         {{ __('hyper.buy_automatic_delivery') }}
+                            </span>
+                        @else
+                        {{-- 人工发货 --}}
+                        <span class="badge bg-warning position-absolute top-0 start-0">
+                            {{ __('hyper.buy_charge') }}
+                            </span>
+
                     @endif
                         <img class="home-img" src="/assets/hyper/images/loading.gif" data-src="{{ picture_ulr($goods['picture']) }}">
                         <div class="flex">
@@ -95,6 +125,11 @@
                                 {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                             </div>
                         </div>
+
+                        <button type="button" class="badge badge-outline-primary">
+                            <strong>{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</strong>
+                        </button>
+
                     </a>
                 @endforeach
             </div>

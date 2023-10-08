@@ -23,7 +23,7 @@ return [
     'home_automatic_delivery' => '自动发货',
     'home_charge'             => '人工发货',
     'home_buy'                => '购买',
-    'home_out_of_stock'       => '缺货',
+    'home_out_of_stock'       => '联系店主补货',
     'home_whole'              => '全部',
     'home_tip'                =>'提示',
     'home_sell_out_tip'       =>'商品缺货',
