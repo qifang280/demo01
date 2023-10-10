@@ -81,11 +81,6 @@
                                 {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                             </div>
                         </div>
-
-                        <button type="button" class="badge badge-outline-primary">
-                            <strong>{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</strong>
-                        </button>
-
                     </a>
                 @endforeach
             @endforeach
@@ -125,11 +120,6 @@
                                 {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                             </div>
                         </div>
-
-                        <button type="button" class="badge badge-outline-primary">
-                            <strong>{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</strong>
-                        </button>
-
                     </a>
                 @endforeach
             </div>
