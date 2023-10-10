@@ -65,17 +65,19 @@
                     </h5>
                 </div>
                 @endif
-                @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
+
+                @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                {{-- 自动发货 --}}
                 <span class="badge bg-success position-absolute top-0 start-0">
-                                                    <i class="ali-icon">&#xe7db;</i>
-                                                    {{ __('goods.fields.automatic_delivery') }}
-                                                </span>
+                         {{ __('hyper.buy_automatic_delivery') }}
+                        </span>
                 @else
+                {{-- 人工发货 --}}
                 <span class="badge bg-warning position-absolute top-0 start-0">
-                                                    <i class="ali-icon">&#xe74b;</i>
-                                                    {{ __('goods.fields.manual_processing') }}
-                                                </span>
+                            {{ __('hyper.buy_charge') }}
+                        </span>
                 @endif
+
                 <img class="home-img" src="/assets/hyper/images/loading.gif"
                      data-src="{{ picture_ulr($goods['picture']) }}">
                 <div class="flex">
@@ -109,17 +111,19 @@
                     </h5>
                 </div>
                 @endif
-                @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
+
+                @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                {{-- 自动发货 --}}
                 <span class="badge bg-success position-absolute top-0 start-0">
-                                                    <i class="ali-icon">&#xe7db;</i>
-                                                    {{ __('goods.fields.automatic_delivery') }}
-                                                </span>
+                         {{ __('hyper.buy_automatic_delivery') }}
+                        </span>
                 @else
+                {{-- 人工发货 --}}
                 <span class="badge bg-warning position-absolute top-0 start-0">
-                                                    <i class="ali-icon">&#xe74b;</i>
-                                                    {{ __('goods.fields.manual_processing') }}
-                                                </span>
+                            {{ __('hyper.buy_charge') }}
+                        </span>
                 @endif
+
                 <img class="home-img" src="/assets/hyper/images/loading.gif"
                      data-src="{{ picture_ulr($goods['picture']) }}">
                 <div class="flex">
