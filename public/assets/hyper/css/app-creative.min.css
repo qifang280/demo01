@@ -8563,7 +8563,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .float-right {
-    float: right!important
+    float: right !important
 }
 
 .float-none {
@@ -13196,6 +13196,18 @@ b, strong {
 .ribbon-box .ribbon-dark:before {
     border-color: #3b4048 transparent transparent
 }
+
+.ribbon-three {
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: left;
+}
+
 
 .ribbon-box .ribbon-two {
     position: absolute;

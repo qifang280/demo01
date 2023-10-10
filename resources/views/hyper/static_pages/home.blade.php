@@ -12,14 +12,14 @@
                 </div>
             </div>
             <h4 class="page-title">
-              主页
+                主页
             </h4>
         </div>
     </div>
 </div>
 <div class="card">
     <div class="card-body">
-        <h5 class="text-muted fw-normal mt-0" title="Number of Orders" >
+        <h5 class="text-muted fw-normal mt-0" title="Number of Orders">
             {{ __('hyper.notice_announcement') }}</h5>
         <div>{!! dujiaoka_config_get('notice') !!}</div>
     </div>
@@ -34,8 +34,9 @@
             <img src="/assets/hyper/images/check.png">
         </div>
     </a>
-    @foreach($data as  $index => $group)
-    <a href="#group-{{ $group['id'] }}" class="tab-link" data-bs-toggle="tab" aria-expanded="false" role="tab" data-toggle="tab">
+    @foreach($data as $index => $group)
+    <a href="#group-{{ $group['id'] }}" class="tab-link" data-bs-toggle="tab" aria-expanded="false" role="tab"
+       data-toggle="tab">
         <span class="tab-title">
             {{ $group['gp_name'] }}
         </span>
@@ -49,81 +50,90 @@
     <div class="tab-pane active" id="group-all">
         <div class="hyper-wrapper">
             @foreach($data as $group)
-                @foreach($group['goods'] as $goods)
-                    @if($goods['in_stock'] > 0)
-                    <a href="{{ url("/buy/{$goods['id']}") }}" class="home-card category">
-                    @else
-                    <a href="javascript:void(0);" onclick="sell_out_tip()" class="home-card category ribbon-box">
-                        <div class="ribbon-two ribbon-two-danger">
-                            {{-- 缺货 --}}
-                            <span>{{ __('hyper.home_out_of_stock') }}</span>
-                        </div>
-
-
-                        @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
-                        {{-- 自动发货 --}}
-                        <span class="badge bg-success position-absolute top-0 start-0">
-                         {{ __('hyper.buy_automatic_delivery') }}
-                        </span>
-                        @else
-                        {{-- 人工发货 --}}
-                        <span class="badge bg-warning position-absolute top-0 start-0">
-                            {{ __('hyper.buy_charge') }}
-                        </span>
-
-                    @endif
-                        <img class="home-img" src="/assets/hyper/images/loading.gif" data-src="{{ picture_ulr($goods['picture']) }}">
-                        <div class="flex">
-                            <p class="name">
-                                {{ $goods['gd_name'] }}
-                            </p>
-                            <div class="price">
-                                {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
-                            </div>
-                        </div>
-                    </a>
-                @endforeach
+            @foreach($group['goods'] as $goods)
+            @if($goods['in_stock'] > 0)
+            <a href="{{ url("/buy/{$goods['id']}") }}" class="home-card category">
+            @else
+            <a href="javascript:void(0);" onclick="sell_out_tip()" class="home-card category ribbon-box">
+                <div class="ribbon-two ribbon-two-danger">
+                    {{-- 缺货 --}}
+                    <span>{{ __('hyper.home_out_of_stock') }}</span>
+                </div>
+                <div class="ribbon-three">
+                    <h5 class="mt-2">
+                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</small>
+                    </h5>
+                </div>
+                @endif
+                @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                <span class="badge bg-success position-absolute top-0 start-0">
+                                                    <i class="ali-icon">&#xe7db;</i>
+                                                    {{ __('goods.fields.automatic_delivery') }}
+                                                </span>
+                @else
+                <span class="badge bg-warning position-absolute top-0 start-0">
+                                                    <i class="ali-icon">&#xe74b;</i>
+                                                    {{ __('goods.fields.manual_processing') }}
+                                                </span>
+                @endif
+                <img class="home-img" src="/assets/hyper/images/loading.gif"
+                     data-src="{{ picture_ulr($goods['picture']) }}">
+                <div class="flex">
+                    <p class="name">
+                        {{ $goods['gd_name'] }}
+                    </p>
+                    <div class="price">
+                        {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
+                    </div>
+                </div>
+            </a>
+            @endforeach
             @endforeach
         </div>
     </div>
-    @foreach($data as  $index => $group)
-        <div class="tab-pane" id="group-{{ $group['id'] }}">
-            <div class="hyper-wrapper">
-                @foreach($group['goods'] as $goods)
-                    @if($goods['in_stock'] > 0)
-                    <a href="{{ url("/buy/{$goods['id']}") }}" class="home-card category">
-                    @else
-                    <a href="javascript:void(0);" onclick="sell_out_tip()" class="home-card category ribbon-box">
-                        <div class="ribbon-two ribbon-two-danger">
-                            {{-- 缺货 --}}
-                            <span>{{ __('hyper.home_out_of_stock') }}</span>
-                        </div>
-
-                        @if($type == \App\Models\Goods::AUTOMATIC_DELIVERY)
-                        {{-- 自动发货 --}}
-                        <span class="badge bg-success position-absolute top-0 start-0">
-                         {{ __('hyper.buy_automatic_delivery') }}
-                            </span>
-                        @else
-                        {{-- 人工发货 --}}
-                        <span class="badge bg-warning position-absolute top-0 start-0">
-                            {{ __('hyper.buy_charge') }}
-                            </span>
-
-                    @endif
-                        <img class="home-img" src="/assets/hyper/images/loading.gif" data-src="{{ picture_ulr($goods['picture']) }}">
-                        <div class="flex">
-                            <p class="name">
-                                {{ $goods['gd_name'] }}
-                            </p>
-                            <div class="price">
-                                {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
-                            </div>
-                        </div>
-                    </a>
-                @endforeach
-            </div>
+    @foreach($data as $index => $group)
+    <div class="tab-pane" id="group-{{ $group['id'] }}">
+        <div class="hyper-wrapper">
+            @foreach($group['goods'] as $goods)
+            @if($goods['in_stock'] > 0)
+            <a href="{{ url("/buy/{$goods['id']}") }}" class="home-card category">
+            @else
+            <a href="javascript:void(0);" onclick="sell_out_tip()" class="home-card category ribbon-box">
+                <div class="ribbon-two ribbon-two-danger">
+                    {{-- 缺货 --}}
+                    <span>{{ __('hyper.home_out_of_stock') }}</span>
+                </div>
+                <div class="ribbon-three">
+                    <h5 class="mt-2">
+                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{ $in_stock }}</small>
+                    </h5>
+                </div>
+                @endif
+                @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
+                <span class="badge bg-success position-absolute top-0 start-0">
+                                                    <i class="ali-icon">&#xe7db;</i>
+                                                    {{ __('goods.fields.automatic_delivery') }}
+                                                </span>
+                @else
+                <span class="badge bg-warning position-absolute top-0 start-0">
+                                                    <i class="ali-icon">&#xe74b;</i>
+                                                    {{ __('goods.fields.manual_processing') }}
+                                                </span>
+                @endif
+                <img class="home-img" src="/assets/hyper/images/loading.gif"
+                     data-src="{{ picture_ulr($goods['picture']) }}">
+                <div class="flex">
+                    <p class="name">
+                        {{ $goods['gd_name'] }}
+                    </p>
+                    <div class="price">
+                        {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
+                    </div>
+                </div>
+            </a>
+            @endforeach
         </div>
+    </div>
     @endforeach
 </div>
 <div class="modal fade" id="notice-modal" tabindex="-1" role="dialog" aria-hidden="true">

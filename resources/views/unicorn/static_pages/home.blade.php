@@ -74,9 +74,9 @@
                                             <div class="card position-relative">
                                                 @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
                                                     <span class="badge bg-success position-absolute top-0 start-0">
-                                            <i class="ali-icon">&#xe7db;</i>
-                                            {{ __('goods.fields.automatic_delivery') }}
-                                        </span>
+                                                        <i class="ali-icon">&#xe7db;</i>
+                                                        {{ __('goods.fields.automatic_delivery') }}
+                                                    </span>
                                                 @else
                                                     <span class="badge bg-warning position-absolute top-0 start-0">
                                                         <i class="ali-icon">&#xe74b;</i>
