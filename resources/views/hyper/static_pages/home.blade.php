@@ -61,7 +61,7 @@
                 </div>
                 <div class="ribbon-three">
                     <h5 class="mt-2">
-                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{goods['in_stock']}}</small>
+                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{$goods['in_stock']}}</small>
                     </h5>
                 </div>
                 @endif
@@ -107,7 +107,7 @@
                 </div>
                 <div class="ribbon-three">
                     <h5 class="mt-2">
-                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{goods['in_stock']}}</small>
+                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{$goods['in_stock']}}</small>
                     </h5>
                 </div>
                 @endif
