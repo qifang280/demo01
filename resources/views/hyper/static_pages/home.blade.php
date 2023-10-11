@@ -59,11 +59,6 @@
                     {{-- 缺货 --}}
                     <span>{{ __('hyper.home_out_of_stock') }}</span>
                 </div>
-                <div class="ribbon-three">
-                    <h5 class="mt-2">
-                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{$goods['in_stock']}}</small>
-                    </h5>
-                </div>
                 @endif
 
                 @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
@@ -88,6 +83,11 @@
                         {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                     </div>
                 </div>
+
+                <button type="button" class="badge badge-outline-primary">
+                    <strong>{{ __('hyper.buy_in_stock') }}：{{ $goods['in_stock'] }}</strong>
+                </button>
+
             </a>
             @endforeach
             @endforeach
@@ -105,11 +105,6 @@
                     {{-- 缺货 --}}
                     <span>{{ __('hyper.home_out_of_stock') }}</span>
                 </div>
-                <div class="ribbon-three">
-                    <h5 class="mt-2">
-                        <small class="text-muted">{{ __('hyper.buy_in_stock') }}：{{$goods['in_stock']}}</small>
-                    </h5>
-                </div>
                 @endif
 
                 @if($goods['type'] == \App\Models\Goods::AUTOMATIC_DELIVERY)
@@ -134,6 +129,11 @@
                         {{ __('hyper.global_currency') }}<b>{{ $goods['actual_price'] }}</b>
                     </div>
                 </div>
+
+                <button type="button" class="badge badge-outline-primary">
+                    <strong>{{ __('hyper.buy_in_stock') }}：{{ $goods['in_stock'] }}</strong>
+                </button>
+
             </a>
             @endforeach
         </div>
